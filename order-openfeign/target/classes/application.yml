@@ -1,0 +1,33 @@
+server:
+  port: 8012
+
+spring:
+  application:
+    name: order-feign-service
+  cloud:
+    nacos:
+      server-addr: 192.168.1.104:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+    loadbalancer:
+      ribbon:
+        enable: false
+
+logging:
+  level:
+    com.xbronze.alicloud.feign: debug
+
+
+# 局部配置可以在yml中配置
+#feign:
+#  client:
+#    config:
+#      # 'stock-service'对应的是微服务名称
+#      stock-service:
+#        loggerLevel: BASIC
+#        # 链接超时时间
+#        connectTimeout: 5000
+#        # 请求处理超时时间
+#        readTimeout: 3000

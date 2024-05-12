@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="stock" />
         <module name="order" />
+        <module name="order-openfeign" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="alicloud" options="" />
       <module name="nacos" options="-parameters" />
       <module name="order" options="-parameters" />
+      <module name="order-openfeign" options="-parameters" />
       <module name="stock" options="-parameters" />
     </option>
   </component>

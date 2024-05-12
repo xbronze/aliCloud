@@ -16,6 +16,7 @@
 	<modules>
 		<module>order</module>
 		<module>stock</module>
+		<module>order-openfeign</module>
 	</modules>
 	<packaging>pom</packaging>
 	<properties>
