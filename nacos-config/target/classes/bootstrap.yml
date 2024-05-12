@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      discovery:
+        # 注册中心
+        server-addr: 192.168.1.104:8848
+        username: nacos
+        password: nacos
+      config:
+        # 配置中心
+        server-addr: 192.168.1.104:8848
+        # 配置文件格式 properties 或者 yaml
+        file-extension: properties
+        # 命名空间的id
+        namespace: 795a71cd-9832-4464-91f5-a76e1d31f2e3
+        group: DEFAULT_GROUP
+

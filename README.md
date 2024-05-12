@@ -169,3 +169,17 @@ spring:
 ### 3.2 契约配置
 
 待补充...
+
+
+
+## 4 Nacos Config
+
+在 Nacos Config Starter 中，dataId 的拼接格式如下
+
+`${prefix}-${spring.profiles.active}.${file-extension}`
+
+- prefix 默认为 spring.application.name 的值，也可以通过配置项 spring.cloud.nacos.config.prefix来配置。
+- spring.profiles.active 即为当前环境对应的 profile，详情可以参考 Spring Boot文档
+- file-extension 为配置内容的数据格式，可以通过配置项 spring.cloud.nacos.config.file-extension来配置。目前只支持 properties 和 yaml 类型。
+
+> 注意，当 activeprofile 为空时，对应的连接符 - 也将不存在，dataId 的拼接格式变成 {prefix}.{file-extension}

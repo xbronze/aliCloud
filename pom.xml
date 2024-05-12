@@ -17,7 +17,8 @@
 		<module>order</module>
 		<module>stock</module>
 		<module>order-openfeign</module>
-	</modules>
+        <module>nacos-config</module>
+    </modules>
 	<packaging>pom</packaging>
 	<properties>
 		<java.version>1.8</java.version>
@@ -65,5 +66,42 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
+	<profiles>
+		<profile>
+			<!-- 开发环境 -->
+			<id>dev</id>
+			<!-- 默认选中的命名空间 -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<activatedProperties>dev</activatedProperties>
+				<nacosNamespace>795a71cd-9832-4464-91f5-a76e1d31f2e3</nacosNamespace>
+				<nacosAddress>192.168.1.104:8848</nacosAddress>
+			</properties>
+		</profile>
+
+		<profile>
+			<!-- 测试环境 -->
+			<id>test</id>
+			<properties>
+				<activatedProperties>test</activatedProperties>
+				<nacosNamespace>c32d22de-cb3c-43b8-ae75-8dfe737c27b6</nacosNamespace>
+				<nacosAddress>192.168.1.104:8848</nacosAddress>
+			</properties>
+		</profile>
+
+		<profile>
+			<!-- 测试环境 -->
+			<id>prod</id>
+			<properties>
+				<activatedProperties>prod</activatedProperties>
+				<nacosNamespace>76daba5d-d72d-47b8-a004-a3f3c9aea4ce</nacosNamespace>
+				<nacosAddress>192.168.1.104:8848</nacosAddress>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
