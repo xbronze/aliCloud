@@ -60,6 +60,7 @@
 
 	<build>
 		<resources>
+			<!--指定filtering=true  maven的占位符解析表达式就可以用于它里面的文件-->
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>true</filtering>

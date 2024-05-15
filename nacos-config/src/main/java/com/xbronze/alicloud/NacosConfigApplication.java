@@ -14,9 +14,9 @@ public class NacosConfigApplication
     public static void main( String[] args )
     {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(NacosConfigApplication.class, args);
-        String userName = applicationContext.getEnvironment().getProperty("user.name");
-        String userAge = applicationContext.getEnvironment().getProperty("user.age");
-        String currentEnv = applicationContext.getEnvironment().getProperty("current.env");
-        System.out.println("user name :" + userName + ", and user age :" + userAge + ", currentEnv：" + currentEnv);
+//        String userName = applicationContext.getEnvironment().getProperty("user.name");
+//        String userAge = applicationContext.getEnvironment().getProperty("user.age");
+//        String currentEnv = applicationContext.getEnvironment().getProperty("current.env");
+//        System.out.println("user name :" + userName + ", and user age :" + userAge + ", currentEnv：" + currentEnv);
     }
 }

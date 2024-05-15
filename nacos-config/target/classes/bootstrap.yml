@@ -16,6 +16,6 @@ spring:
         # 配置文件格式 properties 或者 yaml
         file-extension: properties
         # 命名空间的id
-        namespace: '76daba5d-d72d-47b8-a004-a3f3c9aea4ce'
+        namespace: '795a71cd-9832-4464-91f5-a76e1d31f2e3'
         group: DEFAULT_GROUP
 
